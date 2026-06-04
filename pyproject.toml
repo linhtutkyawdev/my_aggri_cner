@@ -7,5 +7,6 @@ requires-python = ">=3.14"
 dependencies = [
     "bs4>=0.0.2",
     "chardet>=7.4.3",
+    "pyidaungsu>=0.1.4",
     "requests>=2.34.2",
 ]
