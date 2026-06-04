@@ -83,9 +83,10 @@ When multiple exact fixes overlap, run the longest or most specific term first.
    - `ဇန်နဝါရီ@TIME|`
 3. Longer requested or known terms take precedence over smaller existing tags, even across previous tag boundaries.
 4. Split when a phrase contains multiple entity types:
-   - `ပြောင်း@CROP|ဖူး@CROP_PART|`
+   - `ပြောင်းဖူး@CROP|`
    - `ကြက်သွန်@CROP|ဥ@CROP_PART|`
-   - `သကြားပြောင်း@VAR|ဖူး@CROP_PART|`
+   - `သကြားပြောင်းဖူး@VAR|`
+   - `ပဲ@CROP|ရွက်@CROP_PART|`
 5. Split particles, suffixes, plural markers, and punctuation out of entity spans:
    - Correct: `အရွက်@CROP_PART|တွေ@O|`
    - Incorrect: `အရွက်တွေ@CROP_PART|`
