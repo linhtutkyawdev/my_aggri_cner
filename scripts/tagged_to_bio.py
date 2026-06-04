@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Convert `token@TAG|` Burmese CNER files to BIO/CoNLL format."""
+"""Convert `token@TAG|` Burmese CNER files to BIO/BIOES CoNLL format."""
 
 from __future__ import annotations
 
@@ -355,7 +355,24 @@ def units_for(text: str, unit: str) -> list[str]:
     raise ValueError(f"Unsupported unit: {unit}")
 
 
-def bio_rows(segments: list[Segment], *, unit: str) -> list[tuple[str, str]]:
+def entity_prefix(index: int, total: int, *, bioes: bool) -> str:
+    if not bioes:
+        return "B" if index == 0 else "I"
+    if total == 1:
+        return "S"
+    if index == 0:
+        return "B"
+    if index == total - 1:
+        return "E"
+    return "I"
+
+
+def bio_rows(
+    segments: list[Segment],
+    *,
+    unit: str,
+    bioes: bool,
+) -> list[tuple[str, str]]:
     rows: list[tuple[str, str]] = []
     for segment in segments:
         parts = units_for(segment.text, unit)
@@ -363,7 +380,7 @@ def bio_rows(segments: list[Segment], *, unit: str) -> list[tuple[str, str]]:
             rows.extend((part, "O") for part in parts)
             continue
         for index, part in enumerate(parts):
-            prefix = "B" if index == 0 else "I"
+            prefix = entity_prefix(index, len(parts), bioes=bioes)
             rows.append((part, f"{prefix}-{segment.tag}"))
     return rows
 
@@ -390,6 +407,7 @@ def convert_file(
     *,
     allowed_tags: set[str],
     unit: str,
+    bioes: bool,
     labels_only: bool,
     separator: str,
     strict: bool,
@@ -411,7 +429,7 @@ def convert_file(
             if not segments:
                 continue
 
-            rows = bio_rows(segments, unit=unit)
+            rows = bio_rows(segments, unit=unit, bioes=bioes)
             stats.lines += 1
             stats.segments += len(segments)
             stats.output_rows += write_rows(
@@ -422,18 +440,21 @@ def convert_file(
             )
 
 
-def print_tag_table(tags: set[str]) -> None:
+def print_tag_table(tags: set[str], *, bioes: bool) -> None:
     for tag in sorted(tags):
         if tag == "O":
             print("O")
         else:
             print(f"B-{tag}")
             print(f"I-{tag}")
+            if bioes:
+                print(f"E-{tag}")
+                print(f"S-{tag}")
 
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Convert Burmese `token@TAG|` files to BIO/CoNLL format.",
+        description="Convert Burmese `token@TAG|` files to BIO/BIOES CoNLL format.",
     )
     parser.add_argument(
         "input",
@@ -473,7 +494,12 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--labels-only",
         action="store_true",
-        help="Write only BIO labels, one per line.",
+        help="Write only labels, one per line.",
+    )
+    parser.add_argument(
+        "--bioes",
+        action="store_true",
+        help="Write BIOES labels instead of BIO labels.",
     )
     parser.add_argument(
         "--separator",
@@ -488,7 +514,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--print-tags",
         action="store_true",
-        help="Print the BIO tag table loaded from INSTRUCTION.MD and exit.",
+        help="Print the tag table loaded from INSTRUCTION.MD and exit.",
     )
     return parser
 
@@ -499,7 +525,7 @@ def main() -> int:
 
     allowed_tags = load_allowed_tags(args.instruction)
     if args.print_tags:
-        print_tag_table(allowed_tags)
+        print_tag_table(allowed_tags, bioes=args.bioes)
         return 0
 
     if args.input is None:
@@ -524,6 +550,7 @@ def main() -> int:
                 output_handle,
                 allowed_tags=allowed_tags,
                 unit=args.unit,
+                bioes=args.bioes,
                 labels_only=args.labels_only,
                 separator=args.separator,
                 strict=strict,
@@ -536,7 +563,7 @@ def main() -> int:
     print(
         "converted "
         f"{stats.files} file(s), {stats.lines} sentence(s), "
-        f"{stats.segments} segment(s), {stats.output_rows} BIO row(s), "
+        f"{stats.segments} segment(s), {stats.output_rows} label row(s), "
         f"{stats.warnings} warning(s)",
         file=sys.stderr,
     )
