@@ -1,0 +1,57 @@
+bioes_word_emb
+totalloss: 18787.99493408203
+Right token = 22439 All token = 24592 acc = 0.9124512036434613
+Dev: time: 2.09s, speed: 570.18st/s; acc: 0.9125, p: 0.7663, r: 0.7844, f: 0.7752
+Right token = 22519 All token = 24696 acc = 0.9118480725623582
+Test: time: 2.10s, speed: 568.05st/s; acc: 0.9118, p: 0.7640, r: 0.7901, f: 0.7768
+
+bioes_word
+totalloss: 18494.594360351562
+Right token = 22579 All token = 24592 acc = 0.918144111906311
+Dev: time: 3.09s, speed: 387.12st/s; acc: 0.9181, p: 0.8035, r: 0.7636, f: 0.7831
+Right token = 22524 All token = 24696 acc = 0.9120505344995141
+Test: time: 2.46s, speed: 495.56st/s; acc: 0.9121, p: 0.7821, r: 0.7557, f: 0.7687
+
+bioes_syllable_emb
+totalloss: 19953.03973388672
+Right token = 32384 All token = 36083 acc = 0.8974863509131724
+Dev: time: 3.07s, speed: 387.89st/s; acc: 0.8975, p: 0.7307, r: 0.7149, f: 0.7227
+Right token = 32755 All token = 36673 acc = 0.8931639080522455
+Test: time: 3.08s, speed: 388.40st/s; acc: 0.8932, p: 0.7182, r: 0.7060, f: 0.7120
+
+bioes_syllable
+totalloss: 25125.784301757812
+Right token = 32402 All token = 36083 acc = 0.8979852007870742
+Dev: time: 4.69s, speed: 253.72st/s; acc: 0.8980, p: 0.7430, r: 0.6924, f: 0.7168
+Right token = 32881 All token = 36673 acc = 0.8965996782373954
+Test: time: 3.30s, speed: 363.90st/s; acc: 0.8966, p: 0.7364, r: 0.7048, f: 0.7203
+
+bio_word_emb
+totalloss: 11611.695861816406
+Right token = 22748 All token = 24592 acc = 0.9250162654521795
+Dev: time: 2.26s, speed: 529.33st/s; acc: 0.9250, p: 0.7938, r: 0.7789, f: 0.7863
+Right token = 22722 All token = 24696 acc = 0.9200680272108843
+Test: time: 2.42s, speed: 506.26st/s; acc: 0.9201, p: 0.7759, r: 0.7722, f: 0.7740
+
+bio_word
+totalloss: 18354.772888183594
+Right token = 22696 All token = 24592 acc = 0.9229017566688354
+Dev: time: 2.28s, speed: 522.97st/s; acc: 0.9229, p: 0.7964, r: 0.7541, f: 0.7747
+Right token = 22693 All token = 24696 acc = 0.9188937479753806
+Test: time: 2.35s, speed: 519.96st/s; acc: 0.9189, p: 0.7780, r: 0.7438, f: 0.7605
+
+bio_syllable_emb
+totalloss: 20599.02459716797
+Right token =  32526  All token =  36083  acc =  0.9014217221406202
+Dev: time: 3.18s, speed: 374.75st/s; acc: 0.9014, p: 0.7178, r: 0.7048, f: 0.7112
+Right token =  32817  All token =  36673  acc =  0.894854525127478
+Test: time: 3.28s, speed: 366.53st/s; acc: 0.8949, p: 0.7103, r: 0.7085, f: 0.7094
+
+bio_syllable
+totalloss: 17966.243774414062
+Right token =  32605  All token =  36083  acc =  0.9036111188094116
+Dev: time: 4.91s, speed: 242.08st/s; acc: 0.9036, p: 0.7288, r: 0.6964, f: 0.7122
+Exceed previous best f score: 0.7104337631887457
+Save current best model in file: /content/drive/My Drive/MyAgriNER_copy/models/first_sem_agri_bio_syllable.24.model
+Right token =  32887  All token =  36673  acc =  0.8967632863414501
+Test: time: 5.78s, speed: 206.16st/s; acc: 0.8968, p: 0.7137, r: 0.6997, f: 0.7066

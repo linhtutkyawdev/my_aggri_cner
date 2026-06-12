@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1000" viewBox="0 0 1800 1000">
+<text x="95" y="76" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="38" font-weight="700" fill="#101828">Test Inference Speed by Model</text>
+<text x="95" y="112" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="20" fill="#475467">Test-set sentences processed per second</text>
+<line x1="125" y1="850.0" x2="1735" y2="850.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="111" y="855.0" text-anchor="end" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="17" fill="#475467">0</text>
+<line x1="125" y1="721.0" x2="1735" y2="721.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="111" y="726.0" text-anchor="end" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="17" fill="#475467">127</text>
+<line x1="125" y1="592.0" x2="1735" y2="592.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="111" y="597.0" text-anchor="end" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="17" fill="#475467">254</text>
+<line x1="125" y1="463.0" x2="1735" y2="463.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="111" y="468.0" text-anchor="end" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="17" fill="#475467">382</text>
+<line x1="125" y1="334.0" x2="1735" y2="334.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="111" y="339.0" text-anchor="end" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="17" fill="#475467">509</text>
+<line x1="125" y1="205.0" x2="1735" y2="205.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="111" y="210.0" text-anchor="end" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="17" fill="#475467">636</text>
+<line x1="125" y1="850" x2="1735" y2="850" stroke="#98A2B3" stroke-width="1.5"/>
+<text x="225.6" y="886" text-anchor="middle" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="18" font-weight="700" fill="#1D2939"><tspan x="225.6">BIOES Word</tspan><tspan x="225.6" dy="25" font-size="16" font-weight="400" fill="#475467">With Embeddings</tspan></text>
+<rect x="155.2" y="274.1" width="140.9" height="575.9" rx="3" fill="#D97706"/>
+<text x="225.6" y="266.1" text-anchor="middle" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="16" font-weight="700" fill="#1D2939">568</text>
+<text x="426.9" y="886" text-anchor="middle" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="18" font-weight="700" fill="#1D2939"><tspan x="426.9">BIOES Word</tspan><tspan x="426.9" dy="25" font-size="16" font-weight="400" fill="#475467">Without Embeddings</tspan></text>
+<rect x="356.4" y="347.6" width="140.9" height="502.4" rx="3" fill="#D97706"/>
+<text x="426.9" y="339.6" text-anchor="middle" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="16" font-weight="700" fill="#1D2939">496</text>
+<text x="628.1" y="886" text-anchor="middle" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="18" font-weight="700" fill="#1D2939"><tspan x="628.1">BIOES Syllable</tspan><tspan x="628.1" dy="25" font-size="16" font-weight="400" fill="#475467">With Embeddings</tspan></text>
+<rect x="557.7" y="456.2" width="140.9" height="393.8" rx="3" fill="#D97706"/>
+<text x="628.1" y="448.2" text-anchor="middle" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="16" font-weight="700" fill="#1D2939">388</text>
+<text x="829.4" y="886" text-anchor="middle" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="18" font-weight="700" fill="#1D2939"><tspan x="829.4">BIOES Syllable</tspan><tspan x="829.4" dy="25" font-size="16" font-weight="400" fill="#475467">Without Embeddings</tspan></text>
+<rect x="758.9" y="481.1" width="140.9" height="368.9" rx="3" fill="#D97706"/>
+<text x="829.4" y="473.1" text-anchor="middle" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="16" font-weight="700" fill="#1D2939">364</text>
+<text x="1030.6" y="886" text-anchor="middle" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="18" font-weight="700" fill="#1D2939"><tspan x="1030.6">BIO Word</tspan><tspan x="1030.6" dy="25" font-size="16" font-weight="400" fill="#475467">With Embeddings</tspan></text>
+<rect x="960.2" y="336.8" width="140.9" height="513.2" rx="3" fill="#D97706"/>
+<text x="1030.6" y="328.8" text-anchor="middle" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="16" font-weight="700" fill="#1D2939">506</text>
+<text x="1231.9" y="886" text-anchor="middle" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="18" font-weight="700" fill="#1D2939"><tspan x="1231.9">BIO Word</tspan><tspan x="1231.9" dy="25" font-size="16" font-weight="400" fill="#475467">Without Embeddings</tspan></text>
+<rect x="1161.4" y="322.9" width="140.9" height="527.1" rx="3" fill="#D97706"/>
+<text x="1231.9" y="314.9" text-anchor="middle" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="16" font-weight="700" fill="#1D2939">520</text>
+<text x="1433.1" y="886" text-anchor="middle" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="18" font-weight="700" fill="#1D2939"><tspan x="1433.1">BIO Syllable</tspan><tspan x="1433.1" dy="25" font-size="16" font-weight="400" fill="#475467">With Embeddings</tspan></text>
+<rect x="1362.7" y="478.4" width="140.9" height="371.6" rx="3" fill="#D97706"/>
+<text x="1433.1" y="470.4" text-anchor="middle" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="16" font-weight="700" fill="#1D2939">367</text>
+<text x="1634.4" y="886" text-anchor="middle" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="18" font-weight="700" fill="#1D2939"><tspan x="1634.4">BIO Syllable</tspan><tspan x="1634.4" dy="25" font-size="16" font-weight="400" fill="#475467">Without Embeddings</tspan></text>
+<rect x="1563.9" y="641.0" width="140.9" height="209.0" rx="3" fill="#D97706"/>
+<text x="1634.4" y="633.0" text-anchor="middle" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="16" font-weight="700" fill="#1D2939">206</text>
+<rect x="95" y="137" width="17" height="17" rx="2" fill="#D97706"/>
+<text x="122" y="152" font-family="'Times New Roman', 'Liberation Serif', Times, serif" font-size="18" fill="#344054">Test speed</text>
+</svg>
